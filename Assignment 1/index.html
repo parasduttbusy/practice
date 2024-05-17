@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/index.css" />
+  <title>Assignment 1</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="navbar flex-container">
+    <div class="flex-container navbar-left">
+      <img src="/images/logo.png" alt="logo" id="nav-logo">
+      <div class="flex-container date">
+        <span class="material-symbols-outlined"> calendar_today </span>
+        <span>Date</span>
+        <select name="year" id="year-dropdown">
+          <option value="">FY 2024</option>
+          <option value="">FY 2023</option>
+          <option value="">FY 2022</option>
+        </select>
+      </div>
+    </div>
+    <div class="flex-container navbar-right">
+      <span class="material-symbols-outlined menu">
+        menu
+      </span>
+      <img src="/images/user.jpg" alt="User image" id="nav-user-img">
+    </div>
+  </div>
+  <div class="flex-container">
+    <!-- Sidebar -->
+    <div class="sidebar flex-container flex-col">
+      <div class="flex-container sidebar-first flex-col">
+        <img src="/images/logo.png" alt="logo" class="logo" />
+        <div class="flex-container date">
+          <span class="material-symbols-outlined"> calendar_today </span>
+          <span>Date</span>
+          <select name="year" id="year-dropdown">
+            <option value="">FY 2024</option>
+            <option value="">FY 2023</option>
+            <option value="">FY 2022</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex-container flex-col sidebar-second">
+        <div class="nav-items">
+          <span class="material-symbols-outlined"> space_dashboard </span>
+          <p>Dashboard</p>
+        </div>
+        <div class="nav-items">
+          <span class="material-symbols-outlined"> work </span>
+          <p>Subscription</p>
+        </div>
+        <div class="nav-items">
+          <span class="material-symbols-outlined"> group </span>
+          <p>Users</p>
+        </div>
+        <div class="nav-items">
+          <span class="material-symbols-outlined"> account_box </span>
+          <p>My Profile</p>
+        </div>
+        <div class="nav-items">
+          <span class="material-symbols-outlined"> account_box </span>
+          <p>UMS</p>
+        </div>
+        <div class="nav-items">
+          <span class="material-symbols-outlined"> settings </span>
+          <p>Setting</p>
+        </div>
+        <div class="nav-items">
+          <p>Tab 1</p>
+        </div>
+      </div>
+      <div class="sidebar-third flex-container">
+        <img src="/images/user.jpg" alt="User image" id="user-img">
+        <div id="user-detail">
+          <h3>Kamal Dhingra</h3>
+          <p>Channel Partner</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard flex-container flex-col ">
+      <!-- Dashboard Upper -->
+      <div class="dashboard-upper flex-container">
+        <!-- Upper left -->
+        <div class="dashboard-upper-left">
+          <!-- Upper left upper -->
+          <div class="flex-container dashboard-upper-left-upper">
+            <div id="greeting">
+              <h4>Good Morning, Kamal!</h4>
+              <h1>Dashboard</h1>
+            </div>
+            <div class="flex-container search-bar">
+              <input type="text" placeholder="&#xF002;   Search Serial Number"
+                style="font-family: Arial, FontAwesome" />
+            </div>
+          </div>
+
+          <!-- Upper left bottom -->
+          <div class="flex-container dashboard-upper-left-bottom">
+            <div>
+              <h4>Activation this month</h4>
+              <div class="flex-container value-div">
+                <h1 style="color: #00c94f">250</h1>
+                <span class="material-symbols-outlined"> info </span>
+              </div>
+            </div>
+            <div>
+              <h4>Purchase this month</h4>
+              <div class="flex-container value-div">
+                <h1 style="color: #f4b000">400</h1>
+                <span class="material-symbols-outlined info"> info </span>
+              </div>
+            </div>
+            <div>
+              <h4>Year on year comparison</h4>
+              <div class="flex-container value-div">
+                <h1 style="color: #00c94f">
+                  15%
+                  <span class="material-symbols-outlined"> arrow_upward </span>
+                </h1>
+                <span class="material-symbols-outlined">
+                  info
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upper right -->
+        <div class="dashboard-upper-right flex-container">
+          <div class="dashboard-upper-right-inner">
+            <span class="material-symbols-outlined " id="upper-right-info"> info </span>
+            <h3 id="progress-heading">Credit Balance</h3>
+            <h1 id="progress-number">15,20,000</h1>
+            <div id="progress-bar">
+              <div id="progress">
+                <p id="progress-p"> 76% Available</p>
+              </div>
+              <p id="progress-p-2">Used 24%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Bottom -->
+      <div class="dashboard-bottom">
+        <table>
+          <thead>
+            <tr>
+              <td>Date</td>
+              <td>ID</td>
+              <td>Subscription Status</td>
+              <td>Device Purchased</td>
+              <td>Account Credit</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="sort-row">
+              <td colspan="5"></td>
+              <td class="sort">
+                <div>
+                  <span>Sort By : </span>
+                  <select name="Sort By" id="sort-by">
+                    <option value="Date">Date</option>
+                    <option value="Date">ID</option>
+                    <option value="Date">Device Purchased</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td> 27th January 2023 </td>
+              <td> 253 </td>
+              <td> Purchase Serial 13109045</td>
+              <td> 1 </td>
+              <td> Less:1080 </td>
+            </tr>
+            <tr>
+              <td> 27th January 2023 </td>
+              <td> 253 </td>
+              <td> Purchase Serial 13109045</td>
+              <td> 1 </td>
+              <td> Less:1080 </td>
+            </tr>
+            <tr>
+              <td> 27th January 2023 </td>
+              <td> 253 </td>
+              <td> Purchase Serial 13109045</td>
+              <td> 1 </td>
+              <td> Less:1080 </td>
+            </tr>
+            <tr>
+              <td> 27th January 2023 </td>
+              <td> 253 </td>
+              <td> Purchase Serial 13109045</td>
+              <td> 1 </td>
+              <td> Less:1080 </td>
+            </tr>
+            <tr>
+              <td> 27th January 2023 </td>
+              <td> 253 </td>
+              <td> Purchase Serial 13109045</td>
+              <td> 1 </td>
+              <td> Less:1080 </td>
+            </tr>
+            <tr>
+              <td> 27th January 2023 </td>
+              <td> 253 </td>
+              <td> Purchase Serial 13109045</td>
+              <td> 1 </td>
+              <td> Less:1080 </td>
+            </tr>
+            <tr>
+              <td> 27th January 2023 </td>
+              <td> 253 </td>
+              <td> Purchase Serial 13109045</td>
+              <td> 1 </td>
+              <td> Less:1080 </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/index.js"></script>
+</body>
+
+</html>
+
+<!-- background-image: linear-gradient(#F6DDE4, #DDDDE8); -->
